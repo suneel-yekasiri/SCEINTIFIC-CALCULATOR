@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Scientific Calculator</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+     <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
+    <!-- external css file link  -->
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+   
+                    <!-- styling ends here  -->
+
+      <div class="calculator">
+        <div class="display">
+            <input type="text" placeholder="0" id="screen">
+        </div>
+
+        <div class="btns">
+            <div class="row">
+                <button onclick="keySound()" class="btn numOp btn-sm">!</button>
+                <button onclick="keySound()" id="combination" class="btn numOp btn-sm">nCr</button>
+                <button onclick="cubic();keySound()" id="cube" class="btn btn-sm">x <sup>3</sup></button>
+                <button onclick="square();keySound()" id="square" class="btn btn-sm">x <sup>2</sup></button>
+                <button onclick="cubicRoot();keySound()" id="cubeRoot" class="btn btn-sm"><sub>3</sub>√</button>
+            </div>
+            <div class="row">
+                <button onclick="sqrRoot();keySound()" id="squareRoot" class="btn btn-sm"><sub>2</sub>√</button>
+                <button onclick="keySound()" id="power" class="btn numOp btn-sm">^</button>
+                <button onclick="log();keySound()" id="log" class="btn btn-sm">log <sub>e</sub></button>
+                <button onclick="keySound()" id="permutation" class="btn numOp btn-sm">nPr</button>
+                <button onclick="keySound()" id="negSign" class="btn numOp btn-sm">(-)</button>
+            </div>
+            <div class="row">
+                <button onclick="keySound()" class="btn numOp btn-sm">(</button>
+                <button onclick="keySound()" class="btn numOp btn-sm">)</button>
+                <button onclick="sin();keySound()" id="sinFunction" class="btn btn-sm ">sin</button>
+                <button onclick="cos();keySound()" id="cosFunction" class="btn btn-sm">cos</button>
+                <button onclick="tan();keySound()" id="tanFunction" class="btn btn-sm">tan</button>
+            </div>
+            <div class="row">
+                <button onclick="sinInverse();keySound()" id="sinInverse" class="btn btn-sm">sin<sup>-1</sup></button>
+                <button onclick="cosInverse();keySound()" id="cosInverse" class="btn btn-sm">cos<sup>-1</sup></button>
+                <button onclick="tanInverse();keySound()" id="tanInverse" class="btn btn-sm">tan<sup>-1</sup></button>
+                <button onclick="del();keySound()" id="backSpace" class="btn btn-sm">DEL</button>
+                <button onclick="screen.value ='';keySound()" id="allClear" class="btn btn-sm">AC</button>
+            </div>
+            <div class="row">
+                <button onclick="keySound()" class="btn numOp btn-sm">7</button>
+                <button onclick="keySound()" class="btn numOp btn-sm">8</button>
+                <button onclick="keySound()" class="btn numOp btn-sm">9</button>
+                <button onclick="keySound()" class="btn numOp btn-sm">*</button>
+                <button onclick="keySound()" class="btn numOp btn-sm">/</button>
+            </div>
+            <div class="row">
+                <button onclick="keySound()" class="btn numOp btn-sm">4</button>
+                <button onclick="keySound()" class="btn numOp btn-sm">5</button>
+                <button onclick="keySound()" class="btn numOp btn-sm">6</button>
+                <button onclick="keySound()" class="btn numOp btn-sm">+</button>
+                <button onclick="keySound()" class="btn numOp btn-sm">-</button>
+            </div>
+            <div class="row">
+                <button onclick="keySound()" class="btn numOp btn-sm">1</button>
+                <button onclick="keySound()" class="btn numOp btn-sm">2</button>
+                <button onclick="keySound()" class="btn numOp btn-sm">3</button>
+                <button onclick="keySound()" class="btn numOp btn-sm">.</button>
+                <button onclick="resultEquals();equalSound()" id="eval" class="btn btn-sm">=</button>
+            </div>
+            <div class="row">
+                <button onclick="keySound()" class="btn numOp btn-sm">0</button>
+                <button onclick="Euler();keySound()" id="eNum" class="btn btn-sm">e</button>
+                <button onclick="rec();keySound()" id="reciprocal" class="btn btn-sm">1/x</button>
+                <button onclick="pi();keySound()" id="piValue" class="btn btn-sm">π</button>
+                <button onclick="percentValue();keySound()" id="percentValue" class="btn btn-sm">%</button>
+            </div>
+        </div>
+      </div>
+    
+
+
+<!-- external script link  -->
+<script src="./script.js"></script>
+  </body>
+</html>
